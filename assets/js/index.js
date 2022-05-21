@@ -43,14 +43,14 @@ function getUserInfo() {
 // 渲染头像函数
 
 const renderAvatar = (user) => {
-    let name = user.nickname || user.username;
-    $('#welcome').html(`欢迎 ${name}`);
+    let uname = user.nickname || user.username;
+    $('#welcome').html(`欢迎 ${uname}`);
 
     if (user.user_pic !== null) {
         $('.layui-nav-img').attr('src', user.user_pic).show();
         $('.text-avatar').hide();
     } else {
-        let first = name[0].toUpperCase();
+        let first = uname[0].toUpperCase();
         $('.layui-nav-img').hide();
         $('.text-avatar').html(first).show();
     }
